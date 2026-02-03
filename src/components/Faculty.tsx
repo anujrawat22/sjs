@@ -1,4 +1,4 @@
-import { Linkedin, Mail, Award, GraduationCap } from 'lucide-react';
+import { Award } from 'lucide-react';
 
 const facultyMembers = [
   {

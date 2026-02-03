@@ -26,24 +26,25 @@ export function Courses() {
           {/* Class 4-8 Card */}
           <div className="relative bg-white/80 backdrop-blur-xl p-8 rounded-3xl border border-white/50 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group">
             <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl"></div>
-            
+
             <div className="relative z-10">
               <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 text-white flex items-center justify-center mb-6 shadow-lg shadow-blue-500/30 group-hover:scale-110 transition-transform duration-300">
                 <ShieldCheck size={28} />
               </div>
-              
+
               <h3 className="text-2xl font-bold mb-2 text-slate-900">Foundation Stage</h3>
               <div className="flex items-center gap-2 mb-6">
                 <span className="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-wider rounded-full">Class 4 - 8</span>
               </div>
-              
+
               <p className="text-slate-500 text-sm font-medium uppercase tracking-wider mb-4">Preparation for:</p>
-              
+
               <ul className="space-y-3 mb-8">
                 {[
                   'Sainik School',
-                  'UPSS & RMS 6 & 9',
-                  'RIMC Entrance'
+                  'RMS',
+                  'RIMC',
+                  'UP Sainik School'
                 ].map((item, index) => (
                   <li key={index} className="flex items-center gap-3 text-slate-700 group/item">
                     <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0" />
@@ -62,24 +63,25 @@ export function Courses() {
           {/* Class 9-10 Card */}
           <div className="relative bg-white/80 backdrop-blur-xl p-8 rounded-3xl border border-white/50 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group">
             <div className="absolute inset-0 bg-gradient-to-br from-indigo-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl"></div>
-            
+
             <div className="relative z-10">
               <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-indigo-500 to-indigo-600 text-white flex items-center justify-center mb-6 shadow-lg shadow-indigo-500/30 group-hover:scale-110 transition-transform duration-300">
                 <Rocket size={28} />
               </div>
-              
+
               <h3 className="text-2xl font-bold mb-2 text-slate-900">Pre-Career Stage</h3>
               <div className="flex items-center gap-2 mb-6">
                 <span className="px-3 py-1 bg-indigo-100 text-indigo-700 text-xs font-bold uppercase tracking-wider rounded-full">Class 9 & 10</span>
               </div>
-              
+
               <p className="text-slate-500 text-sm font-medium uppercase tracking-wider mb-4">Foundation Course for:</p>
-              
+
               <ul className="space-y-3 mb-8">
                 {[
-                  'NEET & JEE',
-                  'NDA Preparation',
-                  'Junior Civil Services'
+                  'NDA (Early Orientation)',
+                  'JEE & NEET (Concept Foundation)',
+                  'CLAT & CUET (Introduction Level)',
+                  'Civil Services (Junior – Foundation)'
                 ].map((item, index) => (
                   <li key={index} className="flex items-center gap-3 text-slate-700 group/item">
                     <CheckCircle2 className="w-5 h-5 text-indigo-500 flex-shrink-0" />
@@ -98,24 +100,25 @@ export function Courses() {
           {/* Class 11-12 Card */}
           <div className="relative bg-white/80 backdrop-blur-xl p-8 rounded-3xl border border-white/50 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group">
             <div className="absolute inset-0 bg-gradient-to-br from-violet-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl"></div>
-            
+
             <div className="relative z-10">
               <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-violet-500 to-violet-600 text-white flex items-center justify-center mb-6 shadow-lg shadow-violet-500/30 group-hover:scale-110 transition-transform duration-300">
                 <GraduationCap size={28} />
               </div>
-              
+
               <h3 className="text-2xl font-bold mb-2 text-slate-900">Career Excellence</h3>
               <div className="flex items-center gap-2 mb-6">
                 <span className="px-3 py-1 bg-violet-100 text-violet-700 text-xs font-bold uppercase tracking-wider rounded-full">Class 11 & 12</span>
               </div>
-              
-              <p className="text-slate-500 text-sm font-medium uppercase tracking-wider mb-4">Intensive Prep for:</p>
-              
+
+              <p className="text-slate-500 text-sm font-medium uppercase tracking-wider mb-4">Integrated Preparation for:</p>
+
               <ul className="space-y-3 mb-8">
                 {[
-                  'NEET, JEE, NDA',
-                  'CLAT & IPMAT',
-                  'JCS & CUET'
+                  'NDA (Written + SSB Orientation)',
+                  'JEE / NEET (Targeted Preparation)',
+                  'CLAT / CUET',
+                  'Civil Services (Junior)'
                 ].map((item, index) => (
                   <li key={index} className="flex items-center gap-3 text-slate-700 group/item">
                     <CheckCircle2 className="w-5 h-5 text-violet-500 flex-shrink-0" />

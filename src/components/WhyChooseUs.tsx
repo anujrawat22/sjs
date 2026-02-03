@@ -4,49 +4,49 @@ const features = [
   {
     icon: <BookOpen size={28} />,
     title: "Academic Excellence",
-    desc: "Highly qualified faculty focused on strong fundamentals and consistent results through student-centric teaching.",
+    desc: "Experienced faculty ensure strong academic fundamentals, regular assessments, and consistent progress aligned with CBSE and competitive exam requirements.",
     color: "blue"
   },
   {
     icon: <Users size={28} />,
     title: "CBSE Curriculum",
-    desc: "Science, Commerce, and Humanities streams with flexible academic pathways aligned with individual aptitude.",
+    desc: "CBSE-affiliated schooling up to Class 12 with Science, Commerce, and Humanities, supported by smart classrooms, labs, and structured academic planning.",
     color: "indigo"
   },
   {
     icon: <Rocket size={28} />,
     title: "Career Pathways",
-    desc: "Structured guidance for competitive exams and professional courses with early exposure to diverse careers.",
+    desc: "Early and continuous exposure to Sainik School, NDA, JEE, NEET, CLAT, CUET, and Civil Services (Junior) through integrated academic and coaching programmes.",
     color: "purple"
   },
   {
     icon: <ShieldCheck size={28} />,
     title: "Defence Mentorship",
-    desc: "Specialized mentorship by veterans focusing on discipline, leadership, and confidence building.",
+    desc: "Guidance by Ex-NDA officers and defence veterans, focusing on discipline, leadership mindset, SSB orientation, and defence-school culture.",
     color: "teal"
   },
   {
     icon: <Trophy size={28} />,
     title: "Physical Training",
-    desc: "Daily fitness regimens building mental toughness, teamwork, and resilience through sports.",
+    desc: "Daily physical training and structured activities to build stamina, discipline, teamwork, and mental resilience essential for defence and competitive environments.",
     color: "amber"
   },
   {
     icon: <Lightbulb size={28} />,
     title: "Holistic Growth",
-    desc: "Cultural, creative, and leadership activities that encourage self-expression beyond academics.",
+    desc: "Special focus on spoken English, personality development, communication skills, and group activities to build confidence and character.",
     color: "rose"
   },
   {
     icon: <Home size={28} />,
     title: "Secure Hostels",
-    desc: "Well-maintained residential facilities with 24×7 supervision ensuring a safe and homely environment.",
+    desc: "Separate in-campus hostels for boys and girls with 24×7 supervision, resident leadership, and secure, disciplined living conditions.",
     color: "emerald"
   },
   {
     icon: <Utensils size={28} />,
     title: "Nutritious Mess",
-    desc: "Balanced, hygienic meals prepared under strict quality standards focusing on student health.",
+    desc: "Hygienic, well-managed mess providing balanced, nutritious meals, with planned menus to support student health and daily training routines.",
     color: "orange"
   }
 ];
@@ -103,10 +103,10 @@ export function WhyChooseUs() {
             Our Core Values
           </span>
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mt-6 mb-6">
-            Why Choose <span className="text-blue-600">SJS Saharanpur?</span>
+            Why Choose <span className="text-blue-600">WEDA GURUKOOL?</span>
           </h2>
           <p className="text-slate-600 text-lg max-w-2xl mx-auto">
-            A School That Builds Scholars, Leaders & Responsible Citizens through a perfect blend of tradition and modernity.
+            A disciplined learning ecosystem where academics, defence mentorship, residential care, and career preparation come together under one campus.
           </p>
         </div>
 
@@ -114,20 +114,20 @@ export function WhyChooseUs() {
           {features.map((feature, index) => {
             const colors = colorVariants[feature.color];
             return (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className="group p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:bg-white hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative overflow-hidden"
               >
                 <div className={`absolute top-0 right-0 w-24 h-24 ${colors.bg} rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-110`}></div>
-                
+
                 <div className={`relative w-14 h-14 rounded-2xl bg-white shadow-sm ${colors.text} flex items-center justify-center mb-6 ${colors.hoverBg} group-hover:text-white transition-colors duration-300 z-10`}>
                   {feature.icon}
                 </div>
-                
+
                 <h4 className="font-bold text-xl mb-3 text-slate-900 group-hover:text-blue-700 transition-colors">
                   {feature.title}
                 </h4>
-                
+
                 <p className="text-slate-600 leading-relaxed text-sm">
                   {feature.desc}
                 </p>

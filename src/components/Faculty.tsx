@@ -2,51 +2,45 @@ import { Linkedin, Mail, Award, GraduationCap } from 'lucide-react';
 
 const facultyMembers = [
   {
-    name: 'Dr. Robert Anderson',
-    role: 'Principal',
-    qualification: 'Ph.D. in Education',
-    image: 'https://images.pexels.com/photos/3777943/pexels-photo-3777943.jpeg?auto=compress&cs=tinysrgb&w=800',
-    subject: 'Administration',
+    name: 'Col. Amardeep Singh, SM (Retd.)',
+    role: 'Director – WEDA Gurukool',
+    image: '1.png',
+    subject: 'Career Leadership',
     color: 'blue'
   },
   {
-    name: 'Mrs. Sarah Mitchell',
-    role: 'Vice Principal',
-    qualification: 'M.Sc. Physics',
-    image: 'https://images.pexels.com/photos/5212317/pexels-photo-5212317.jpeg?auto=compress&cs=tinysrgb&w=800',
-    subject: 'Physics',
+    name: 'Capt. Neesha Singh (Retd.)',
+    role: 'Career Wing',
+    image: '2.png',
+    subject: 'Personality Development',
     color: 'indigo'
   },
   {
-    name: 'Mr. James Wilson',
-    role: 'Senior Coordinator',
-    qualification: 'M.Sc. Mathematics',
-    image: 'https://images.pexels.com/photos/3184611/pexels-photo-3184611.jpeg?auto=compress&cs=tinysrgb&w=800',
-    subject: 'Mathematics',
-    color: 'violet'
-  },
-  {
-    name: 'Ms. Emily Davis',
-    role: 'HOD Science',
-    qualification: 'M.Sc. Chemistry',
-    image: 'https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=800',
-    subject: 'Chemistry',
+    name: 'Mr. Shishir Singh Rana',
+    role: 'Chairman – St. Joseph’s School, Saharanpur',
+    image: '3.png',
+    subject: 'Visionary Leadership',
     color: 'purple'
   },
   {
-    name: 'Mr. David Brown',
-    role: 'Sports Director',
-    qualification: 'B.P.Ed, M.P.Ed',
-    image: 'https://images.pexels.com/photos/3775534/pexels-photo-3775534.jpeg?auto=compress&cs=tinysrgb&w=800',
-    subject: 'Physical Education',
+    name: 'Dr. Christopher Singh',
+    role: 'Principal – St. Joseph’s School, Saharanpur',
+    image: '4.png',
+    subject: 'Academic Leadership',
+    color: 'purple'
+  },
+  {
+    name: 'Mr. Surendra Pal',
+    role: 'Director - The Maasters Class',
+    image: '5.png',
+    subject: 'Career Planning',
     color: 'sky'
   },
   {
-    name: 'Ms. Olivia Taylor',
-    role: 'HOD Arts',
-    qualification: 'M.F.A.',
-    image: 'https://images.pexels.com/photos/3772511/pexels-photo-3772511.jpeg?auto=compress&cs=tinysrgb&w=800',
-    subject: 'Fine Arts',
+    name: 'Mrs. Simran Kaur Kukreja',
+    role: 'Head of Academics - Bench Ready',
+    image: '6.png',
+    subject: 'Entrance Strategy',
     color: 'pink'
   }
 ];
@@ -64,7 +58,7 @@ export function Faculty() {
             Our Mentors
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-            Meet Our <span className="text-blue-600">Expert Faculty</span>
+            Meet Our <span className="text-blue-600">Expert Mentors</span>
           </h2>
           <p className="text-slate-600 max-w-2xl mx-auto text-lg">
             Dedicated educators committed to guiding your child towards academic excellence and holistic growth.
@@ -73,28 +67,18 @@ export function Faculty() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {facultyMembers.map((member, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className="group relative bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-slate-100"
             >
               {/* Image Section - Increased Height and adjusted fit */}
               <div className="h-[350px] overflow-hidden relative">
                 <div className={`absolute inset-0 bg-${member.color}-900/10 group-hover:bg-transparent transition-colors z-10`}></div>
-                <img 
-                  src={member.image} 
-                  alt={member.name} 
+                <img
+                  src={member.image}
+                  alt={member.name}
                   className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-700"
                 />
-                
-                {/* Overlay Icons */}
-                <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/80 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-300 z-20 flex justify-end gap-3">
-                  <button className="p-2 bg-white/20 backdrop-blur-md rounded-full text-white hover:bg-white hover:text-blue-900 transition-colors">
-                    <Linkedin size={18} />
-                  </button>
-                  <button className="p-2 bg-white/20 backdrop-blur-md rounded-full text-white hover:bg-white hover:text-blue-900 transition-colors">
-                    <Mail size={18} />
-                  </button>
-                </div>
               </div>
 
               {/* Content Section */}
@@ -112,10 +96,6 @@ export function Faculty() {
                 </div>
 
                 <div className="space-y-3">
-                  <div className="flex items-center gap-3 text-slate-600 text-sm">
-                    <GraduationCap size={16} className="text-blue-400" />
-                    <span>{member.qualification}</span>
-                  </div>
                   <div className="w-full h-px bg-slate-100"></div>
                   <div className="flex items-center justify-between">
                     <span className="text-slate-500 text-xs font-bold uppercase tracking-wider">Expertise</span>

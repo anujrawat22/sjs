@@ -1,5 +1,14 @@
 
 export function Navbar() {
+  const downloadBrochure = () => {
+    window.open('/brochure.pdf', '_blank');
+    const link = document.createElement('a');
+    link.href = '/brochure.pdf';
+    link.download = 'WEDA_Gurukool_Brochure.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
   return (
     <nav className="bg-white shadow-sm sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
@@ -15,7 +24,7 @@ export function Navbar() {
           <a href="#why-us" className="hover:text-blue-900 transition-colors">Why Choose Us</a>
           <a href="#contact" className="hover:text-blue-900 transition-colors">Contact</a>
         </div>
-        <button className="bg-blue-900 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-800 transition-all text-sm">
+        <button className="bg-blue-900 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-800 transition-all text-sm" onClick={downloadBrochure}>
           DOWNLOAD BROCHURE
         </button>
       </div>

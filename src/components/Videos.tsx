@@ -15,7 +15,7 @@ export function Videos() {
             </div>
           </div>
           <div className="space-y-6">
-            <h3 className="text-2xl font-bold text-blue-900">Courses by WEDA Gurukool</h3>
+            <h3 className="text-2xl font-bold text-blue-900">About WEDA Gurukool</h3>
             <div className="relative aspect-video bg-blue-900 rounded-2xl overflow-hidden shadow-lg flex items-center justify-center group cursor-pointer">
               <img src="/13.png" className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500" alt="Courses" />
               <div className="relative z-10 w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center text-blue-900 group-hover:scale-110 transition-transform shadow-xl">

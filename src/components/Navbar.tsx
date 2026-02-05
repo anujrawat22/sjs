@@ -1,3 +1,4 @@
+import { Download } from 'lucide-react';
 
 export function Navbar() {
   const downloadBrochure = () => {
@@ -24,8 +25,9 @@ export function Navbar() {
           <a href="#why-us" className="hover:text-blue-900 transition-colors">Why Choose Us</a>
           <a href="#contact" className="hover:text-blue-900 transition-colors">Contact</a>
         </div>
-        <button className="bg-blue-900 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-800 transition-all text-sm" onClick={downloadBrochure}>
-          DOWNLOAD BROCHURE
+        <button className="bg-blue-900 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-800 transition-all text-sm flex items-center gap-2 cursor-pointer" onClick={downloadBrochure}>
+          <span>Brochure</span>
+          <Download className="w-4 h-4" />
         </button>
       </div>
     </nav>

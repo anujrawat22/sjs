@@ -2,31 +2,10 @@ import { Award } from 'lucide-react';
 
 const facultyMembers = [
   {
-    name: 'Col. Amardeep Singh, SM (Retd.)',
-    role: 'Director – WEDA Gurukool',
-    image: '1.png',
-    subject: 'Career Leadership',
-    color: 'blue'
-  },
-  {
-    name: 'Capt. Neesha Singh (Retd.)',
-    role: 'Career Wing',
-    image: '2.png',
-    subject: 'Personality Development',
-    color: 'indigo'
-  },
-  {
     name: 'Mr. Shishir Singh Rana',
     role: 'Chairman – St. Joseph’s School, Saharanpur',
     image: '3.png',
     subject: 'Visionary Leadership',
-    color: 'purple'
-  },
-  {
-    name: 'Dr. Christopher Singh',
-    role: 'Principal – St. Joseph’s School, Saharanpur',
-    image: '4.png',
-    subject: 'Academic Leadership',
     color: 'purple'
   },
   {
@@ -37,11 +16,18 @@ const facultyMembers = [
     color: 'sky'
   },
   {
-    name: 'Mrs. Simran Kaur Kukreja',
-    role: 'Head of Academics - Bench Ready',
-    image: '6.png',
-    subject: 'Entrance Strategy',
-    color: 'pink'
+    name: 'Capt. Neesha Singh (Retd.)',
+    role: 'Career Wing',
+    image: '2.png',
+    subject: 'Personality Development',
+    color: 'indigo'
+  },
+  {
+    name: 'Col. Amardeep Singh, SM (Retd.)',
+    role: 'Director – WEDA Gurukool',
+    image: '1.png',
+    subject: 'Career Leadership',
+    color: 'blue'
   }
 ];
 

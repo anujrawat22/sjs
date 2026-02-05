@@ -78,7 +78,7 @@ export function Courses() {
 
               <ul className="space-y-3 mb-8">
                 {[
-                  'NDA (Early Orientation)',
+                  'NDA (Foundation)',
                   'JEE & NEET (Concept Foundation)',
                   'CLAT & CUET (Introduction Level)',
                   'Civil Services (Junior – Foundation)'
@@ -115,7 +115,7 @@ export function Courses() {
 
               <ul className="space-y-3 mb-8">
                 {[
-                  'NDA (Written + SSB Orientation)',
+                  'NDA (Foundation + Advance)',
                   'JEE / NEET (Targeted Preparation)',
                   'CLAT / CUET',
                   'Civil Services (Junior)'

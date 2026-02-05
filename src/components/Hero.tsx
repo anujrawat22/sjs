@@ -3,7 +3,6 @@ import { Star } from 'lucide-react';
 export function Hero() {
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-blue-900">
-      {/* Background Video Container */}
       <div className="absolute inset-0 z-0">
         <video
           autoPlay
@@ -12,7 +11,6 @@ export function Hero() {
           playsInline
           className="w-full h-full object-cover scale-105"
         >
-          {/* Using a brighter, more active classroom/campus video */}
           <source
             src="/vdo.mp4"
             type="video/mp4"
@@ -20,7 +18,6 @@ export function Hero() {
           Your browser does not support the video tag.
         </video>
 
-        {/* Little Overlay for Better Text Visibility */}
         <div className="absolute inset-0 bg-blue-950/40 z-10"></div>
       </div>
 
@@ -35,9 +32,9 @@ export function Hero() {
           </div>
 
           <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-8 leading-[1.1] tracking-tight drop-shadow-2xl">
-            WEDA GURUKOOL <br />
+            Multiple Career Center <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-yellow-200 to-yellow-400">
-              The Center for Excellence
+              under St. Joseph School, powered by WEDA
             </span>
           </h1>
 
@@ -65,7 +62,7 @@ export function Hero() {
               </div>
             ))}
           </div> */}
-          <div className="group flex items-center gap-3 bg-yellow-400 backdrop-blur-xl border border-blue-400/30 px-8 py-4 rounded-xl text-white font-semibold hover:bg-yellow-600 hover:text-blue-950 hover:border-yellow-400 transition-all duration-300 cursor-default shadow-lg hover:scale-105">
+          <div className="group flex items-center gap-3 bg-yellow-400 backdrop-blur-xl border border-blue-400/30 px-8 py-4 rounded-xl text-white font-semibold hover:bg-yellow-600 hover:text-blue-950 hover:border-yellow-400 transition-all duration-300 cursor-pointer shadow-lg hover:scale-105">
             <span className="text-white group-hover:text-blue-900 transition-colors">REGISTER NOW</span>
           </div>
         </div>

@@ -1,72 +1,160 @@
-import { Star } from 'lucide-react';
+import { Star, ArrowRight } from 'lucide-react';
+import { useState, useEffect, useRef } from 'react';
 
 export function Hero() {
+  const [visibleCount, setVisibleCount] = useState(0);
+  const [isInView, setIsInView] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
+  
+  const text1 = "MULTIPLE ";
+  const text2 = "CAREER";
+  const text3 = " CENTER";
+  const totalLength = text1.length + text2.length + text3.length;
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsInView(true);
+          } else {
+            setIsInView(false);
+            setVisibleCount(0); // Reset when out of view
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    let interval: ReturnType<typeof setInterval>;
+    let startDelay: ReturnType<typeof setTimeout>;
+
+    if (isInView) {
+      startDelay = setTimeout(() => {
+        interval = setInterval(() => {
+          setVisibleCount((prev) => {
+            if (prev >= totalLength) {
+              clearInterval(interval);
+              return prev;
+            }
+            return prev + 1;
+          });
+        }, 100);
+      }, 500);
+    }
+
+    return () => {
+      clearTimeout(startDelay);
+      clearInterval(interval);
+    };
+  }, [isInView, totalLength]);
+
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-blue-900">
+    <section ref={sectionRef} className="relative h-screen flex items-center justify-center overflow-hidden bg-slate-900">
+      {/* Background Video */}
       <div className="absolute inset-0 z-0">
         <video
           autoPlay
           loop
           muted
           playsInline
-          className="w-full h-full object-cover scale-105"
+          className="w-full h-full object-cover"
         >
-          <source
-            src="/vdo.mp4"
-            type="video/mp4"
-          />
-          Your browser does not support the video tag.
+          <source src="/vdo.mp4" type="video/mp4" />
         </video>
-
-        <div className="absolute inset-0 bg-blue-950/40 z-10"></div>
+        {/* Gradient Overlay for better text visibility */}
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-900/50 via-slate-900/40 to-slate-900/60 z-10"></div>
+        {/* Red tint overlay for branding integration */}
+        <div className="absolute inset-0 bg-red-900/20 mix-blend-overlay z-10"></div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 py-20 text-center">
-        <div className="max-w-4xl mx-auto flex flex-col items-center">
-          {/* Decorative Glow */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-500/20 rounded-full blur-[100px] pointer-events-none"></div>
-
-          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-yellow-400/50 text-yellow-300 px-4 py-2 rounded-full text-sm font-bold mb-8 animate-fade-in shadow-lg">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 w-full h-full flex flex-col justify-center">
+        <div className="flex flex-col items-center text-center max-w-5xl mx-auto">
+          
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 bg-red-600/90 backdrop-blur-sm text-white px-6 py-2 rounded-full text-sm font-bold mb-8 shadow-lg shadow-red-900/20 animate-fade-in-up border border-red-500/50">
             <Star size={14} className="fill-yellow-400 text-yellow-400 animate-pulse" />
-            Admissions Open 2026-27
+            <span className="tracking-wide uppercase">Admissions Open 2026-27</span>
           </div>
 
-          <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-8 leading-[1.1] tracking-tight drop-shadow-2xl">
-            Multiple Career Center <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-yellow-200 to-yellow-400">
-              under St. Joseph School, powered by WEDA
-            </span>
-          </h1>
+          {/* Main Heading */}
+          <div className="space-y-2 mb-8">
+            <h2 className="text-xl md:text-3xl font-medium text-slate-300 tracking-wider uppercase mb-2 animate-fade-in-up animate-delay-100">
+              St. Joseph's School
+            </h2>
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white leading-none tracking-tight drop-shadow-2xl min-h-[1.1em]">
+              {/* Part 1: MULTIPLE */}
+              {text1.split('').map((char, i) => (
+                <span key={`p1-${i}`} className={`transition-opacity duration-100 ${i < visibleCount ? 'opacity-100' : 'opacity-0'}`}>
+                  {char}
+                </span>
+              ))}
+              
+              {/* Part 2: CAREER (Red Gradient) */}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-600">
+                {text2.split('').map((char, i) => (
+                  <span key={`p2-${i}`} className={`transition-opacity duration-100 ${i + text1.length < visibleCount ? 'opacity-100' : 'opacity-0'}`}>
+                    {char}
+                  </span>
+                ))}
+              </span>
 
-          <p className="text-xl md:text-2xl text-blue-100 mb-10 font-medium max-w-2xl leading-relaxed drop-shadow-lg">
-            Shaping Young Minds into
-            <br />
-            <span className="text-white font-bold">Confident Leaders of Tomorrow</span>
+              {/* Part 3: CENTER */}
+              {text3.split('').map((char, i) => (
+                <span key={`p3-${i}`} className={`transition-opacity duration-100 ${i + text1.length + text2.length < visibleCount ? 'opacity-100' : 'opacity-0'}`}>
+                  {char}
+                </span>
+              ))}
+
+              {/* Cursor */}
+              <span className={`inline-block w-1 md:w-2 h-[0.8em] bg-red-500 ml-1 align-middle ${visibleCount >= totalLength ? 'animate-blink' : 'opacity-100'}`}></span>
+            </h1>
+            <div className="flex items-center justify-center gap-3 mt-6 animate-fade-in-up animate-delay-300">
+              <span className="h-px w-8 md:w-16 bg-slate-500/50"></span>
+              <span className="text-lg md:text-2xl font-bold text-slate-200 italic">
+                Powered by <span className="text-red-500 font-black not-italic text-2xl md:text-3xl ml-1">WEDA</span>
+              </span>
+              <span className="h-px w-8 md:w-16 bg-slate-500/50"></span>
+            </div>
+          </div>
+
+          {/* Description */}
+          <p className="text-lg md:text-2xl text-slate-300 mb-10 font-light max-w-3xl leading-relaxed drop-shadow-md animate-fade-in-up animate-delay-500">
+            Shaping Young Minds into <strong className="text-white font-bold">Confident Leaders</strong>. 
+            Integrated schooling with expert guidance for Defence, Engineering, Medical, & Civil Services.
           </p>
 
-          <div className="bg-white/10 backdrop-blur-md border-l-4 border-yellow-400 p-6 rounded-r-2xl mb-12 max-w-xl shadow-xl">
-            <p className="text-lg text-blue-50 italic">
-              Integrated schooling with expert guidance for Defence, Engineering, Medical, Law & Civil Services pathways.
-            </p>
-          </div>
-
-          {/* <div className="flex flex-wrap justify-center gap-4">
-            {[
-              { icon: <BookOpen size={20} />, text: 'Schooling' },
-              { icon: <Trophy size={20} />, text: 'Coaching' },
-              { icon: <Home size={20} />, text: 'Hostel' }
-            ].map((item, idx) => (
-              <div key={idx} className="group flex items-center gap-3 bg-blue-950/40 backdrop-blur-xl border border-blue-400/30 px-8 py-4 rounded-xl text-white font-semibold hover:bg-yellow-400 hover:text-blue-950 hover:border-yellow-400 transition-all duration-300 cursor-default shadow-lg hover:scale-105">
-                <span className="text-yellow-400 group-hover:text-blue-900 transition-colors">{item.icon}</span>
-                {item.text}
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto animate-fade-in-up animate-delay-700">
+            <button className="group relative px-8 py-4 bg-red-600 hover:bg-red-700 text-white font-bold rounded-xl shadow-xl shadow-red-600/30 transition-all duration-300 hover:-translate-y-1 overflow-hidden cursor-pointer">
+              <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+              <div className="relative flex items-center justify-center gap-2">
+                <span>REGISTER NOW</span>
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </div>
-            ))}
-          </div> */}
-          <div className="group flex items-center gap-3 bg-yellow-400 backdrop-blur-xl border border-blue-400/30 px-8 py-4 rounded-xl text-white font-semibold hover:bg-yellow-600 hover:text-blue-950 hover:border-yellow-400 transition-all duration-300 cursor-pointer shadow-lg hover:scale-105">
-            <span className="text-white group-hover:text-blue-900 transition-colors">REGISTER NOW</span>
+            </button>
+            
+            <button className="px-8 py-4 bg-white/5 hover:bg-white/10 backdrop-blur-md border border-white/10 text-white font-bold rounded-xl transition-all duration-300 hover:-translate-y-1 flex items-center justify-center gap-2 cursor-pointer hover:border-white/30">
+              <span>EXPLORE COURSES</span>
+            </button>
           </div>
         </div>
       </div>
+      
+      {/* Bottom fade */}
+      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-slate-50 to-transparent z-10"></div>
     </section>
   );
 }

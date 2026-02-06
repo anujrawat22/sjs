@@ -53,44 +53,44 @@ const features = [
 
 const colorVariants: Record<string, { bg: string; text: string; hoverBg: string }> = {
   blue: {
-    bg: 'bg-blue-50',
-    text: 'text-blue-600',
-    hoverBg: 'group-hover:bg-blue-600'
+    bg: 'bg-slate-50',
+    text: 'text-slate-700',
+    hoverBg: 'group-hover:bg-slate-700'
   },
   indigo: {
-    bg: 'bg-indigo-50',
-    text: 'text-indigo-600',
-    hoverBg: 'group-hover:bg-indigo-600'
+    bg: 'bg-red-50',
+    text: 'text-red-700',
+    hoverBg: 'group-hover:bg-red-700'
   },
   purple: {
-    bg: 'bg-purple-50',
-    text: 'text-purple-600',
-    hoverBg: 'group-hover:bg-purple-600'
+    bg: 'bg-slate-50',
+    text: 'text-slate-900',
+    hoverBg: 'group-hover:bg-slate-900'
   },
   teal: {
-    bg: 'bg-teal-50',
-    text: 'text-teal-600',
-    hoverBg: 'group-hover:bg-teal-600'
+    bg: 'bg-red-50',
+    text: 'text-red-600',
+    hoverBg: 'group-hover:bg-red-600'
   },
   amber: {
-    bg: 'bg-amber-50',
-    text: 'text-amber-600',
-    hoverBg: 'group-hover:bg-amber-600'
+    bg: 'bg-slate-100',
+    text: 'text-slate-800',
+    hoverBg: 'group-hover:bg-slate-800'
   },
   rose: {
-    bg: 'bg-rose-50',
-    text: 'text-rose-600',
-    hoverBg: 'group-hover:bg-rose-600'
+    bg: 'bg-red-100',
+    text: 'text-red-800',
+    hoverBg: 'group-hover:bg-red-800'
   },
   emerald: {
-    bg: 'bg-emerald-50',
-    text: 'text-emerald-600',
-    hoverBg: 'group-hover:bg-emerald-600'
+    bg: 'bg-slate-50',
+    text: 'text-slate-600',
+    hoverBg: 'group-hover:bg-slate-600'
   },
   orange: {
-    bg: 'bg-orange-50',
-    text: 'text-orange-600',
-    hoverBg: 'group-hover:bg-orange-600'
+    bg: 'bg-red-50',
+    text: 'text-red-500',
+    hoverBg: 'group-hover:bg-red-500'
   }
 };
 
@@ -99,11 +99,11 @@ export function WhyChooseUs() {
     <section id="why-us" className="py-24 bg-white relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
-          <span className="text-blue-600 font-bold tracking-wider uppercase text-sm bg-blue-50 px-4 py-2 rounded-full">
+          <span className="text-red-600 font-bold tracking-wider uppercase text-sm bg-red-50 px-4 py-2 rounded-full">
             Our Core Values
           </span>
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mt-6 mb-6">
-            Why Choose <span className="text-blue-600">WEDA GURUKOOL?</span>
+            Why Choose <span className="text-red-600">WEDA GURUKOOL?</span>
           </h2>
           <p className="text-slate-600 text-lg max-w-2xl mx-auto">
             A disciplined learning ecosystem where academics, defence mentorship, residential care, and career preparation come together under one campus.
@@ -124,7 +124,7 @@ export function WhyChooseUs() {
                   {feature.icon}
                 </div>
 
-                <h4 className="font-bold text-xl mb-3 text-slate-900 group-hover:text-blue-700 transition-colors">
+                <h4 className="font-bold text-xl mb-3 text-slate-900 group-hover:text-red-700 transition-colors">
                   {feature.title}
                 </h4>
 

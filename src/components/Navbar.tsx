@@ -16,16 +16,16 @@ export function Navbar() {
         <div className="flex items-center gap-3">
           <img src="/13.jpeg" alt="SJS Logo" className="w-12 h-12 object-contain" />
           <div>
-            <h1 className="text-xl font-bold text-blue-900 leading-none">WEDA Gurukool</h1>
+            <h1 className="text-xl font-bold text-slate-900 leading-none">WEDA Gurukool</h1>
           </div>
         </div>
         <div className="hidden md:flex gap-8 text-sm font-medium text-slate-600">
-          <a href="#about" className="hover:text-blue-900 transition-colors">About</a>
-          <a href="#courses" className="hover:text-blue-900 transition-colors">Courses</a>
-          <a href="#why-us" className="hover:text-blue-900 transition-colors">Why Choose Us</a>
-          <a href="#contact" className="hover:text-blue-900 transition-colors">Contact</a>
+          <a href="#about" className="hover:text-red-600 transition-colors">About</a>
+          <a href="#courses" className="hover:text-red-600 transition-colors">Courses</a>
+          <a href="#why-us" className="hover:text-red-600 transition-colors">Why Choose Us</a>
+          <a href="#contact" className="hover:text-red-600 transition-colors">Contact</a>
         </div>
-        <button className="bg-blue-900 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-800 transition-all text-sm flex items-center gap-2 cursor-pointer" onClick={downloadBrochure}>
+        <button className="bg-red-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-red-700 transition-all text-sm flex items-center gap-2 cursor-pointer" onClick={downloadBrochure}>
           <span>Brochure</span>
           <Download className="w-4 h-4" />
         </button>

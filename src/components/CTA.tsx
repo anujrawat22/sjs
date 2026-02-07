@@ -27,13 +27,13 @@ export function CTA() {
             </a>
 
             {/* Button 2 */}
-            <button className="group w-full md:w-auto bg-white text-slate-900 px-8 py-4 rounded-xl font-bold flex items-center justify-center gap-3 hover:bg-slate-50 transition-all duration-300 shadow-lg hover:shadow-white/30 hover:scale-105">
+            <button className="group w-full md:w-auto bg-white text-slate-900 px-8 py-4 rounded-xl font-bold flex items-center justify-center gap-3 hover:bg-slate-50 transition-all duration-300 shadow-lg hover:shadow-white/30 hover:scale-105" onClick={() => window.open('https://winningedgecareer.opensourcecrm.in/forms/wtl/b6f7f506fcc2a8ad5f0d592b715c8850?styled=1', '_blank')}>
               <Calendar size={20} className="group-hover:rotate-12 transition-transform" />
               Schedule Visit
             </button>
 
             {/* Button 3 */}
-            <button className="group w-full md:w-auto bg-slate-800 text-white border border-slate-700 px-8 py-4 rounded-xl font-bold flex items-center justify-center gap-3 hover:bg-slate-700 transition-all duration-300 shadow-lg hover:shadow-slate-800/30 hover:scale-105">
+            <button className="group w-full md:w-auto bg-slate-800 text-white border border-slate-700 px-8 py-4 rounded-xl font-bold flex items-center justify-center gap-3 hover:bg-slate-700 transition-all duration-300 shadow-lg hover:shadow-slate-800/30 hover:scale-105" onClick={() => window.open('https://winningedgecareer.opensourcecrm.in/forms/wtl/b6f7f506fcc2a8ad5f0d592b715c8850?styled=1', '_blank')}>
               <ClipboardCheck size={20} className="group-hover:rotate-12 transition-transform" />
               Apply Now
               <ArrowRight size={18} className="opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300" />
@@ -42,7 +42,7 @@ export function CTA() {
 
           <div className="mt-12 flex items-center justify-center gap-2 text-slate-200/80 font-semibold text-sm uppercase tracking-widest">
             <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
-            Admissions Open | Limited Seats Available
+            Admissions Open 2026 - 2027 | Limited Seats Available
           </div>
         </div>
       </div>

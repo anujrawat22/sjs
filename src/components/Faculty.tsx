@@ -1,8 +1,5 @@
 import { Award, Building2, Shield } from 'lucide-react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/pagination';
+
 
 const facultyMembers = [
   {
@@ -14,7 +11,7 @@ const facultyMembers = [
     type: 'school'
   },
   {
-    name: 'Mr. Surendra Pal',
+    name: 'Mr. Mukesh Lal',
     role: 'Director - The Maasters Class',
     image: '5.png',
     subject: 'Career Planning',
@@ -30,14 +27,6 @@ const facultyMembers = [
     type: 'school'
   },
   {
-    name: 'Mr. Surendra Pal',
-    role: 'Director - The Maasters Class',
-    image: 'mohanlal.jpeg',
-    subject: 'Career Planning',
-    affiliation: "St. Joseph's School",
-    type: 'school'
-  },
-  {
     name: 'Col. Amardeep Singh, SM (Retd.)',
     role: 'Director',
     image: '1.png',
@@ -47,10 +36,7 @@ const facultyMembers = [
   }
 ];
 
-// Duplicate members for infinite loop effect if needed, but Swiper loop works well with enough slides.
-// Since we have 4 slides and want to show 3, loop might be tricky without duplication.
-// Let's duplicate the array to ensure smooth infinite autoplay.
-const sliderMembers = [...facultyMembers, ...facultyMembers];
+
 
 export function Faculty() {
   return (
@@ -68,44 +54,18 @@ export function Faculty() {
           </p>
         </div>
 
-        <Swiper
-          modules={[Autoplay, Pagination]}
-          spaceBetween={30}
-          slidesPerView={1}
-          loop={true}
-          autoplay={{
-            delay: 3000,
-            disableOnInteraction: false,
-          }}
-          pagination={{
-            clickable: true,
-            dynamicBullets: true,
-          }}
-          breakpoints={{
-            640: {
-              slidesPerView: 1,
-            },
-            768: {
-              slidesPerView: 2,
-            },
-            1024: {
-              slidesPerView: 3,
-            },
-          }}
-          className="pb-12"
-        >
-          {sliderMembers.map((member, index) => (
-            <SwiperSlide key={index} className="h-auto pb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pb-12">
+          {facultyMembers.map((member, index) => (
+            <div key={index} className="h-full">
               <div
                 className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-slate-100 flex flex-col h-full"
               >
                 {/* Affiliation Badge */}
                 <div className="absolute top-4 left-4 z-20">
-                  <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold shadow-sm backdrop-blur-md ${
-                    member.type === 'weda' 
-                      ? 'bg-red-600 text-white' 
-                      : 'bg-slate-800 text-white'
-                  }`}>
+                  <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold shadow-sm backdrop-blur-md ${member.type === 'weda'
+                    ? 'bg-red-600 text-white'
+                    : 'bg-slate-800 text-white'
+                    }`}>
                     {member.type === 'weda' ? <Shield size={12} /> : <Building2 size={12} />}
                     {member.affiliation}
                   </span>
@@ -124,9 +84,8 @@ export function Faculty() {
                 {/* Content Section */}
                 <div className="p-6 flex-1 flex flex-col justify-between relative bg-white">
                   <div className="-mt-12 mb-4 relative z-10">
-                    <div className={`w-12 h-12 rounded-xl flex items-center justify-center text-white shadow-lg ${
-                       member.type === 'weda' ? 'bg-red-600' : 'bg-slate-800'
-                    }`}>
+                    <div className={`w-12 h-12 rounded-xl flex items-center justify-center text-white shadow-lg ${member.type === 'weda' ? 'bg-red-600' : 'bg-slate-800'
+                      }`}>
                       <Award size={24} />
                     </div>
                   </div>
@@ -135,12 +94,11 @@ export function Faculty() {
                     <h3 className="text-lg font-bold text-slate-900 mb-1 leading-tight min-h-[3rem] flex items-end">
                       {member.name}
                     </h3>
-                    <p className={`text-sm font-medium mb-4 ${
-                      member.type === 'weda' ? 'text-red-600' : 'text-slate-600'
-                    }`}>
+                    <p className={`text-sm font-medium mb-4 ${member.type === 'weda' ? 'text-red-600' : 'text-slate-600'
+                      }`}>
                       {member.role}
                     </p>
-                    
+
                     <div className="pt-4 border-t border-slate-100">
                       <p className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Expertise</p>
                       <p className="text-sm font-semibold text-slate-700">{member.subject}</p>
@@ -148,9 +106,9 @@ export function Faculty() {
                   </div>
                 </div>
               </div>
-            </SwiperSlide>
+            </div>
           ))}
-        </Swiper>
+        </div>
       </div>
     </section>
   );

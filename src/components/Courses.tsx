@@ -1,8 +1,9 @@
 import { ShieldCheck, Rocket, GraduationCap, CheckCircle2, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export function Courses() {
   return (
-    <section id="courses" className="py-24 bg-gradient-to-br from-slate-50 via-white to-slate-100 relative overflow-hidden">
+    <section id="courses" className="py-24 bg-linear-to-br from-slate-50 via-white to-slate-100 relative overflow-hidden">
       {/* Decorative Background Elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-10 w-64 h-64 bg-red-50 rounded-full blur-3xl"></div>
@@ -25,7 +26,7 @@ export function Courses() {
         <div className="grid md:grid-cols-3 gap-8">
           {/* Class 4-8 Card */}
           <div className="relative bg-white/80 backdrop-blur-xl p-8 rounded-3xl border border-white/50 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group">
-            <div className="absolute inset-0 bg-gradient-to-br from-slate-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl"></div>
+            <div className="absolute inset-0 bg-linear-to-br from-slate-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl"></div>
 
             <div className="relative z-10">
               <div className="w-14 h-14 rounded-2xl bg-slate-800 text-white flex items-center justify-center mb-6 shadow-lg shadow-slate-500/30 group-hover:scale-110 transition-transform duration-300">
@@ -47,22 +48,22 @@ export function Courses() {
                   'UP Sainik School'
                 ].map((item, index) => (
                   <li key={index} className="flex items-center gap-3 text-slate-700 group/item">
-                    <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
+                    <CheckCircle2 className="w-5 h-5 text-red-500 shrink-0" />
                     <span className="font-medium group-hover/item:text-slate-900 transition-colors">{item}</span>
                   </li>
                 ))}
               </ul>
 
-              <button className="w-full py-3 px-4 bg-white border border-slate-200 rounded-xl text-slate-700 font-semibold hover:bg-slate-800 hover:text-white hover:border-slate-800 transition-all duration-300 flex items-center justify-center gap-2 group/btn">
+              <Link to="/course/foundation-stage" className="w-full py-3 px-4 bg-white border border-slate-200 rounded-xl text-slate-700 font-semibold hover:bg-slate-800 hover:text-white hover:border-slate-800 transition-all duration-300 flex items-center justify-center gap-2 group/btn">
                 Learn More
                 <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-              </button>
+              </Link>
             </div>
           </div>
 
           {/* Class 9-10 Card */}
           <div className="relative bg-white/80 backdrop-blur-xl p-8 rounded-3xl border border-white/50 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group">
-            <div className="absolute inset-0 bg-gradient-to-br from-red-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl"></div>
+            <div className="absolute inset-0 bg-linear-to-br from-red-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl"></div>
 
             <div className="relative z-10">
               <div className="w-14 h-14 rounded-2xl bg-red-600 text-white flex items-center justify-center mb-6 shadow-lg shadow-red-500/30 group-hover:scale-110 transition-transform duration-300">
@@ -84,22 +85,22 @@ export function Courses() {
                   'Civil Services (Junior – Foundation)'
                 ].map((item, index) => (
                   <li key={index} className="flex items-center gap-3 text-slate-700 group/item">
-                    <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
+                    <CheckCircle2 className="w-5 h-5 text-red-500 shrink-0" />
                     <span className="font-medium group-hover/item:text-red-700 transition-colors">{item}</span>
                   </li>
                 ))}
               </ul>
 
-              <button className="w-full py-3 px-4 bg-white border border-slate-200 rounded-xl text-slate-700 font-semibold hover:bg-red-600 hover:text-white hover:border-red-600 transition-all duration-300 flex items-center justify-center gap-2 group/btn">
+              <Link to="/course/pre-career-stage" className="w-full py-3 px-4 bg-white border border-slate-200 rounded-xl text-slate-700 font-semibold hover:bg-red-600 hover:text-white hover:border-red-600 transition-all duration-300 flex items-center justify-center gap-2 group/btn">
                 Learn More
                 <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-              </button>
+              </Link>
             </div>
           </div>
 
           {/* Class 11-12 Card */}
           <div className="relative bg-white/80 backdrop-blur-xl p-8 rounded-3xl border border-white/50 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group">
-            <div className="absolute inset-0 bg-gradient-to-br from-slate-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl"></div>
+            <div className="absolute inset-0 bg-linear-to-br from-slate-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl"></div>
 
             <div className="relative z-10">
               <div className="w-14 h-14 rounded-2xl bg-slate-900 text-white flex items-center justify-center mb-6 shadow-lg shadow-slate-900/30 group-hover:scale-110 transition-transform duration-300">
@@ -121,16 +122,16 @@ export function Courses() {
                   'Civil Services (Junior)'
                 ].map((item, index) => (
                   <li key={index} className="flex items-center gap-3 text-slate-700 group/item">
-                    <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
+                    <CheckCircle2 className="w-5 h-5 text-red-500 shrink-0" />
                     <span className="font-medium group-hover/item:text-slate-900 transition-colors">{item}</span>
                   </li>
                 ))}
               </ul>
 
-              <button className="w-full py-3 px-4 bg-white border border-slate-200 rounded-xl text-slate-700 font-semibold hover:bg-slate-900 hover:text-white hover:border-slate-900 transition-all duration-300 flex items-center justify-center gap-2 group/btn">
+              <Link to="/course/career-excellence" className="w-full py-3 px-4 bg-white border border-slate-200 rounded-xl text-slate-700 font-semibold hover:bg-slate-900 hover:text-white hover:border-slate-900 transition-all duration-300 flex items-center justify-center gap-2 group/btn">
                 Learn More
                 <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-              </button>
+              </Link>
             </div>
           </div>
         </div>

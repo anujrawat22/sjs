@@ -72,6 +72,11 @@ const courseData: Record<string, Course> = {
                 title: 'Psychological & Interview Readiness',
                 icon: <UserCheck className="w-5 h-5" />,
                 items: ['Confidence building', 'Communication skills', 'Interview preparation']
+            },
+            {
+                title: 'DISCIPLINE & OFFICER-LIKE QUALITIES',
+                icon: <ShieldCheck className="w-5 h-5" />,
+                items: ['Leadership Habits', 'Decision Making', 'Responsibility & Ethics']
             }
         ],
         highlights: [
@@ -99,10 +104,10 @@ const courseData: Record<string, Course> = {
         icon: <Rocket className="w-8 h-8" />,
         classes: 'Classes IX & X',
         objectives: [
-            'To strengthen academic fundamentals relevant to defence school entrance examinations',
-            'To familiarise students with entrance examination patterns and requirements',
-            'To develop discipline, confidence, and communication skills',
-            'To prepare students for interviews and personality assessments'
+            'Build strong academic foundations required for Sainik School, RMS, RIMC & UP Sainik School entrance exams',
+            'Familiarise students with exam patterns, syllabus, and selection process of defence schools',
+            'Develop discipline, confidence, communication, and leadership qualities from an early stage',
+            'Prepare students for interviews, intelligence tests, and personality assessments'
         ],
         structure: [
             {
@@ -157,16 +162,6 @@ const courseData: Record<string, Course> = {
         ],
         specializations: [
             {
-                title: 'IIT–JEE Programme',
-                partner: "The Master's Class",
-                focus: ['Conceptual clarity', 'Time management', 'Practice and accuracy', 'Alignment with Board curriculum']
-            },
-            {
-                title: 'NEET Programme',
-                partner: "The Master's Class",
-                focus: ['Strong conceptual foundation', 'Exam readiness and accuracy', 'Integrated preparation with school academics']
-            },
-            {
                 title: 'NDA & Defence Preparation',
                 partner: "WEDA",
                 focus: ['NDA foundation (English & General Studies)', 'Discipline and personality development', 'Communication skills and interview orientation', 'Defence career guidance']
@@ -174,8 +169,25 @@ const courseData: Record<string, Course> = {
             {
                 title: 'Bench Ready Support',
                 partner: "Bench Ready",
-                focus: ['Concept-based learning aligned with exam patterns', 'Practice-oriented preparation for accuracy and speed', 'Communication skills and confidence-building sessions', 'Interview and aptitude orientation']
+                focus: [
+                    'Concept-based learning aligned with CLAT, CUET, IPMAT & other competitive exam patterns',
+                    'Practice-oriented preparation for accuracy, speed & exam temperament',
+                    'Strong focus on Communication Skills & Confidence Building',
+                    'Aptitude, Logical Reasoning & Interview Orientation for CLAT, CUET & IPMAT'
+                ]
+            },
+            {
+                title: 'IIT-JEE (Mains & Advanced) & NEET PROGRAMME',
+                partner: "The Master's Class",
+                focus: [
+                    'Strong Conceptual Foundation for Mains, Advanced & NEET',
+                    'High-level Practice focused on speed, accuracy & problem-solving',
+                    'Smart Time Management & Exam Strategy',
+                    'Integrated Board + Competitive Exam Preparation'
+                ]
             }
+
+
         ],
         environment: [
             'Well-ventilated classrooms and subject-specific laboratories',

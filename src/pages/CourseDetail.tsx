@@ -454,7 +454,7 @@ export default function CourseDetail() {
                                             onClick={() => window.open('https://winningedgecareer.opensourcecrm.in/forms/wtl/b6f7f506fcc2a8ad5f0d592b715c8850?styled=1', '_blank')}
                                             className="w-full py-4 bg-red-600 text-white rounded-xl font-black text-xs uppercase tracking-[0.2em] shadow-lg shadow-red-900/20 hover:bg-red-700 hover:-translate-y-1 transition-all active:scale-95 flex items-center justify-center gap-2"
                                         >
-                                            Enrol Now <ArrowRight size={16} />
+                                            Enroll Now <ArrowRight size={16} />
                                         </button>
                                         <p className="mt-4 text-[10px] font-black text-slate-400 text-center uppercase tracking-widest leading-relaxed">
                                             {course.contact}
